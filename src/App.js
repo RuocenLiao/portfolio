@@ -1,27 +1,34 @@
-import React, { Component } from 'react';
-import { HashRouter, Route, Link } from "react-router-dom";
+import React from 'react';
+import './App.css';
+import Navbar from './components/Navbar.js';
+import { BrowserRouter as Router, Switch, Route } from
+'react-router-dom';
+import Home from './components/pages/Home';
+import BunBun from './components/pages/bun-bun';
+import Artogether from './components/pages/artogether';
+import Pandabool from './components/pages/pandabool';
+import AboutMe from './components/pages/About-me';
 
-class App extends Component {
-  render() {
-    return (
-      <HashRouter basename="/">
-        <div>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-
-          <hr />
-  
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-        </div>
-      </HashRouter>
-    );
-  }
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path='/' exact component=
+          {Home}/>
+          <Route path='/bun-bun' exact component=
+          {BunBun}/>
+          <Route path='/artogether' exact component=
+          {Artogether}/>
+          <Route path='/pandabool' exact component=
+          {Pandabool}/>
+          <Route path='/about-me' exact component=
+          {AboutMe}/>
+        </Switch>
+      </Router>
+    </>
+  );
 }
-
-const Home = () => <div><h2>Home</h2></div>
-const About = () => <div><h2>About</h2></div>
 
 export default App;
