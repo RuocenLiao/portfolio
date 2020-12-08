@@ -12,10 +12,10 @@ import AboutMe from './components/pages/About-me';
 function App() {
   return (
     <>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar />
         <Switch>
-          <Route path='/portfolio/' exact component=
+          <Route path='/' exact component=
           {Home}/>
           <Route path='/bun-bun' exact component=
           {BunBun}/>
