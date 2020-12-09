@@ -12,7 +12,7 @@ import AboutMe from './components/pages/About-me';
 function App() {
   return (
     <>
-      <HashRouter basename='/'>
+      <HashRouter basename='/portfolio'>
         <Navbar />
         <Switch>
           <Route path='/' exact component=
