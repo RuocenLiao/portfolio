@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar.js';
-import { BrowserRouter as Router, Switch, Route } from
+import { HashRouter, Switch, Route } from
 'react-router-dom';
 import Home from './components/pages/Home';
 import BunBun from './components/pages/bun-bun';
@@ -12,7 +12,7 @@ import AboutMe from './components/pages/About-me';
 function App() {
   return (
     <>
-      <Router basename={process.env.PUBLIC_URL}>
+      <HashRouter basename='/'>
         <Navbar />
         <Switch>
           <Route path='/' exact component=
@@ -26,7 +26,7 @@ function App() {
           <Route path='/about-me' exact component=
           {AboutMe}/>
         </Switch>
-      </Router>
+      </HashRouter>
     </>
   );
 }
