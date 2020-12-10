@@ -9,7 +9,7 @@ function Squares() {
             <div className='squares__wrapper'>
                 <ul className='squares__items'>
                   <SquareItem 
-                      src='images/bun-bun.jpg'
+                      src='../images/bun-bun.jpg'
                       text='A Website'
                       label='Bun Bun Bake Shop'
                       path='/bun-bun'

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { BrowserRouter, Link } from 'react-router-dom';
 import './Squares.css';
 
 function SquareItem(props) {
     return (
-        <>
+        <BrowserRouter basename='/portfolio'>
             <li className='squares__item'>
                 <Link className='squares__item__link'
                   to={props.path}>
@@ -42,7 +42,7 @@ function SquareItem(props) {
                          
                 </Link>
             </li>  
-        </>
+        </BrowserRouter>
     );
 }
 
